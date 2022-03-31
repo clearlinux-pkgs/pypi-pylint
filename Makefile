@@ -1,5 +1,5 @@
 PKG_NAME := pypi-pylint
-URL = https://files.pythonhosted.org/packages/17/20/4261712608bce9aba2e502631162920fb60b0da5fbfb1b2f0560314c05ab/pylint-2.13.3.tar.gz
+URL = https://files.pythonhosted.org/packages/f5/3d/8296010885be5c42bc2cf4f04287ae11cebdef65d7819984d1be4d1584bd/pylint-2.13.4.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
