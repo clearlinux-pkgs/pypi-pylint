@@ -4,7 +4,7 @@
 #
 Name     : pypi-pylint
 Version  : 2.15.5
-Release  : 146
+Release  : 147
 URL      : https://files.pythonhosted.org/packages/4e/9d/fa68dd17140373786c5a379f6b313ceeb324dfe47ff13f717710c2e63c1d/pylint-2.15.5.tar.gz
 Source0  : https://files.pythonhosted.org/packages/4e/9d/fa68dd17140373786c5a379f6b313ceeb324dfe47ff13f717710c2e63c1d/pylint-2.15.5.tar.gz
 Summary  : python code static checker
