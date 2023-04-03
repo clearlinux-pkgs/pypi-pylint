@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-pylint
-Version  : 2.17.1
-Release  : 160
-URL      : https://files.pythonhosted.org/packages/a1/f5/4c1b656d479f85dc9b7c4145f95090a0e78b0398e9d217ffe808e8a46999/pylint-2.17.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/a1/f5/4c1b656d479f85dc9b7c4145f95090a0e78b0398e9d217ffe808e8a46999/pylint-2.17.1.tar.gz
+Version  : 2.17.2
+Release  : 161
+URL      : https://files.pythonhosted.org/packages/00/06/24c4d02c247fbca313fc9fda9033996d337f93c29a02ccd4f031c7c80d5d/pylint-2.17.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/00/06/24c4d02c247fbca313fc9fda9033996d337f93c29a02ccd4f031c7c80d5d/pylint-2.17.2.tar.gz
 Summary  : python code static checker
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+
@@ -16,13 +16,6 @@ Requires: pypi-pylint-license = %{version}-%{release}
 Requires: pypi-pylint-python = %{version}-%{release}
 Requires: pypi-pylint-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : pypi(astroid)
-BuildRequires : pypi(isort)
-BuildRequires : pypi(mccabe)
-BuildRequires : pypi(platformdirs)
-BuildRequires : pypi(setuptools)
-BuildRequires : pypi(tomlkit)
-BuildRequires : pypi(wheel)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -76,10 +69,10 @@ python3 components for the pypi-pylint package.
 
 
 %prep
-%setup -q -n pylint-2.17.1
-cd %{_builddir}/pylint-2.17.1
+%setup -q -n pylint-2.17.2
+cd %{_builddir}/pylint-2.17.2
 pushd ..
-cp -a pylint-2.17.1 buildavx2
+cp -a pylint-2.17.2 buildavx2
 popd
 
 %build
@@ -87,7 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679586357
+export SOURCE_DATE_EPOCH=1680552370
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz "
