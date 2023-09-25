@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-pylint
-Version  : 2.17.5
-Release  : 164
-URL      : https://files.pythonhosted.org/packages/19/07/24a57a4b12b8ea09f61436db7b312676aa2e526a34dbd0f2866e3e563e1a/pylint-2.17.5.tar.gz
-Source0  : https://files.pythonhosted.org/packages/19/07/24a57a4b12b8ea09f61436db7b312676aa2e526a34dbd0f2866e3e563e1a/pylint-2.17.5.tar.gz
+Version  : 2.17.6
+Release  : 165
+URL      : https://files.pythonhosted.org/packages/1b/f4/d9c872445748641b0166fcdb5c7fd3a443b59b35da222d28b9b621d8966a/pylint-2.17.6.tar.gz
+Source0  : https://files.pythonhosted.org/packages/1b/f4/d9c872445748641b0166fcdb5c7fd3a443b59b35da222d28b9b621d8966a/pylint-2.17.6.tar.gz
 Summary  : python code static checker
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+
@@ -71,10 +71,10 @@ python3 components for the pypi-pylint package.
 
 
 %prep
-%setup -q -n pylint-2.17.5
-cd %{_builddir}/pylint-2.17.5
+%setup -q -n pylint-2.17.6
+cd %{_builddir}/pylint-2.17.6
 pushd ..
-cp -a pylint-2.17.5 buildavx2
+cp -a pylint-2.17.6 buildavx2
 popd
 
 %build
@@ -82,7 +82,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1690387938
+export SOURCE_DATE_EPOCH=1695654936
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
