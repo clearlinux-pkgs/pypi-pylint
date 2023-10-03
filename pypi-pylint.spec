@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-pylint
-Version  : 2.17.7
-Release  : 166
-URL      : https://files.pythonhosted.org/packages/a3/e9/21f9ce3e4b81eef011be070a29f8a5c193e2488ed8713a898baa4e8b3362/pylint-2.17.7.tar.gz
-Source0  : https://files.pythonhosted.org/packages/a3/e9/21f9ce3e4b81eef011be070a29f8a5c193e2488ed8713a898baa4e8b3362/pylint-2.17.7.tar.gz
+Version  : 3.0.0
+Release  : 167
+URL      : https://files.pythonhosted.org/packages/aa/f7/325b71d78faf9fcf1c246669a2448356fe3d7d69c5f93d48f41cc241a6bb/pylint-3.0.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/aa/f7/325b71d78faf9fcf1c246669a2448356fe3d7d69c5f93d48f41cc241a6bb/pylint-3.0.0.tar.gz
 Summary  : python code static checker
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+
@@ -17,7 +17,6 @@ Requires: pypi-pylint-python = %{version}-%{release}
 Requires: pypi-pylint-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(setuptools)
-BuildRequires : pypi(wheel)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -71,10 +70,10 @@ python3 components for the pypi-pylint package.
 
 
 %prep
-%setup -q -n pylint-2.17.7
-cd %{_builddir}/pylint-2.17.7
+%setup -q -n pylint-3.0.0
+cd %{_builddir}/pylint-3.0.0
 pushd ..
-cp -a pylint-2.17.7 buildavx2
+cp -a pylint-3.0.0 buildavx2
 popd
 
 %build
@@ -82,7 +81,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1696262595
+export SOURCE_DATE_EPOCH=1696347508
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -144,7 +143,6 @@ popd
 
 %files bin
 %defattr(-,root,root,-)
-/usr/bin/epylint
 /usr/bin/pylint
 /usr/bin/pylint-config
 /usr/bin/pyreverse
