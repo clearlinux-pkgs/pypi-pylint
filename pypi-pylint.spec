@@ -5,7 +5,7 @@
 #
 Name     : pypi-pylint
 Version  : 3.0.1
-Release  : 168
+Release  : 169
 URL      : https://files.pythonhosted.org/packages/9c/83/43e54a4168ef12f91a6609bd40a0ecfa6cb075eda43321ac96e57040f3ed/pylint-3.0.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/9c/83/43e54a4168ef12f91a6609bd40a0ecfa6cb075eda43321ac96e57040f3ed/pylint-3.0.1.tar.gz
 Summary  : python code static checker
