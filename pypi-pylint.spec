@@ -6,10 +6,10 @@
 # autospec commit: 5905be9
 #
 Name     : pypi-pylint
-Version  : 3.2.1
-Release  : 176
-URL      : https://files.pythonhosted.org/packages/14/cf/2e36e27381a3d8b3736d0deab9838fc4b3b59f609002ddae1f2c85bd6aae/pylint-3.2.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/14/cf/2e36e27381a3d8b3736d0deab9838fc4b3b59f609002ddae1f2c85bd6aae/pylint-3.2.1.tar.gz
+Version  : 3.2.2
+Release  : 177
+URL      : https://files.pythonhosted.org/packages/0c/4c/b561478a1ccb91e9b02965cb999d2281894d43e68c0bf3777d023af15f11/pylint-3.2.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/0c/4c/b561478a1ccb91e9b02965cb999d2281894d43e68c0bf3777d023af15f11/pylint-3.2.2.tar.gz
 Summary  : python code static checker
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+
@@ -72,10 +72,10 @@ python3 components for the pypi-pylint package.
 
 
 %prep
-%setup -q -n pylint-3.2.1
-cd %{_builddir}/pylint-3.2.1
+%setup -q -n pylint-3.2.2
+cd %{_builddir}/pylint-3.2.2
 pushd ..
-cp -a pylint-3.2.1 buildavx2
+cp -a pylint-3.2.2 buildavx2
 popd
 
 %build
@@ -83,7 +83,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1716090526
+export SOURCE_DATE_EPOCH=1716263892
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
